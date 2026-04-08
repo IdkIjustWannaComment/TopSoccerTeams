@@ -28,7 +28,7 @@ class MainActivity : AppCompatActivity() {
         //displays array in the textview
         var teamsDisplay = ""
         var counter = 0
-        while (counter <5) {
+        while (counter < teams.count()) {
             teamsDisplay += "${teams[counter]}\n"
             counter++
 

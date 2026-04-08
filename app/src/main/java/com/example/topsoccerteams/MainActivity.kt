@@ -6,8 +6,10 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import java.util.Arrays
 
 class MainActivity : AppCompatActivity() {
+
 
     val teams = arrayOf<String>("Mamelodi Sundowns FC", "Orlando Pirates",
         "Bidvest Wits", "Stellenbosch FC",
@@ -20,7 +22,11 @@ class MainActivity : AppCompatActivity() {
 
         val teamsOutput = findViewById<TextView>(R.id.txtOutput)
 
-        teamsOutput.text = teams[0]
+        //changes the value of position - in the array
+        teams[0] = "Mamelodi Sundowns FC :3"
+
+        //displays array in the textview
+        teamsOutput.text = Arrays.toString(teams)
 
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->

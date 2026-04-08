@@ -26,7 +26,14 @@ class MainActivity : AppCompatActivity() {
         teams[0] = "Mamelodi Sundowns FC :3"
 
         //displays array in the textview
-        teamsOutput.text = Arrays.toString(teams)
+        var teamsDisplay = ""
+        var counter = 0
+        while (counter <5) {
+            teamsDisplay += "${teams[counter]}\n"
+            counter++
+
+        }
+
 
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->

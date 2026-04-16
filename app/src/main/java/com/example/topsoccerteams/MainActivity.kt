@@ -8,6 +8,12 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import java.util.Arrays
 
+
+fun logArrayValues(arr: Array<String>, limit: Int = 0) {if (limit == 0)
+{Log.v("Array Values", Arrays.toString(arr))}
+    else{Log.v("Array Values", Arrays.toString(arr.sliceArray(0..limit -1)))}
+    
+
 class MainActivity : AppCompatActivity() {
 
 
@@ -30,7 +36,7 @@ class MainActivity : AppCompatActivity() {
         var counter = 0
         for (team in teams) {
             teamsDisplay += "${team}\n"
-            
+
 
         }
 

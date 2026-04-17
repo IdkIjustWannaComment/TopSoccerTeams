@@ -19,9 +19,13 @@ fun getLongestName(arr: Array<String>): String {
     return longest
 }
 
-fun logArrayValues(arr: Array<String>, limit: Int = 0) {if (limit == 0)
-{Log.v("Array Values", Arrays.toString(arr))}
-    else{Log.v("Array Values", Arrays.toString(arr.sliceArray(0..limit -1)))}
+fun logArrayValues(arr: Array<String>, limit: Int = 0) {
+    if (limit == 0) {
+        Log.v("Array Values", Arrays.toString(arr))
+    } else {
+        Log.v("Array Values", Arrays.toString(arr.sliceArray(0..limit - 1)))
+    }
+}
 
 
 class MainActivity : AppCompatActivity() {

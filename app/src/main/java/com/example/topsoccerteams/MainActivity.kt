@@ -9,14 +9,14 @@ import androidx.core.view.WindowInsetsCompat
 import java.util.Arrays
 import android.util.Log
 
-fun getLongestName(arr: Array<String>): String {
-    var longest = arr[0]
+fun getShortestName(arr: Array<String>): String {
+    var shortest = arr[0]
 
-    for (name in arr) {  if (name.length > longest.length) {
-            longest = name
+    for (name in arr) {  if (name.length < shortest.length) {
+        shortest = name
         }
     }
-    return longest
+    return shortest
 }
 
 fun logArrayValues(arr: Array<String>, limit: Int = 0) {
@@ -54,8 +54,8 @@ class MainActivity : AppCompatActivity() {
 
         }
 
-        val longestTeam = getLongestName(teams)
-        teamsDisplay += "\nLongest Team Name:\n$longestTeam"
+        val shortestTeam = getShortestName(teams)
+        teamsDisplay += "\nShortest Team Name:\n$shortestTeam"
         teamsOutput.text = teamsDisplay
 
         logArrayValues(teams)

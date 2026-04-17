@@ -9,7 +9,15 @@ import androidx.core.view.WindowInsetsCompat
 import java.util.Arrays
 import android.util.Log
 
-fun getLongestName()
+fun getLongestName(arr: Array<String>): String {
+    var longest = arr[0]
+
+    for (name in arr) {  if (name.length > longest.length) {
+            longest = name
+        }
+    }
+    return longest
+}
 
 fun logArrayValues(arr: Array<String>, limit: Int = 0) {if (limit == 0)
 {Log.v("Array Values", Arrays.toString(arr))}
@@ -41,6 +49,10 @@ class MainActivity : AppCompatActivity() {
 
 
         }
+
+        val longestTeam = getLongestName(teams)
+        teamsDisplay += "\nLongest Team Name:\n$longestTeam"
+        teamsOutput.text = teamsDisplay
 
         logArrayValues(teams)
         logArrayValues(teams,3)

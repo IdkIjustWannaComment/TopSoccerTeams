@@ -7,12 +7,14 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import java.util.Arrays
+import android.util.Log
 
+fun getLongestName()
 
 fun logArrayValues(arr: Array<String>, limit: Int = 0) {if (limit == 0)
 {Log.v("Array Values", Arrays.toString(arr))}
     else{Log.v("Array Values", Arrays.toString(arr.sliceArray(0..limit -1)))}
-    
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -40,7 +42,8 @@ class MainActivity : AppCompatActivity() {
 
         }
 
-
+        logArrayValues(teams)
+        logArrayValues(teams,3)
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
